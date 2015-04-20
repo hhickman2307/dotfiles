@@ -99,6 +99,11 @@ echo 'Checking for YouCompleteMe...'
 if [ ! -d ~/.vim/bundle/YouCompleteMe ]; then
     echo -e '\tYouCompleteMe not found, installing...'
     git clone https://github.com/Valloric/YouCompleteMe
+    sudo apt-get install build-essential cmake
+    sudo apt-get install python-dev
+    cd ~/.vim/bundle/YouCompleteMe
+    git submodule update --init --recursive
+    ./install.sh --clang-completer
     echo -e '\tYouCompleteMe installed successfully.'
 else
     echo -e '\tYouCompleteMe found, igorning.'
@@ -138,6 +143,17 @@ if [ ! -d ~/.fonts ]; then
     echo -e '\tPatched Fonts Installed. Remember to change to one.'
 else
     echo -e '\tPatched Fonts found, ignoring.'
+fi
+echo
+
+echo 'Checking for color schemes...'
+if [ ! -d ~/.vim/colors ]; then
+    echo -e '\tColor schemes not found, copying...'
+    mkdir ~/.vim/colors
+    cp ~/dotfiles/colors ~/.vim/colors
+    echo -e '\tColor schemes copied.'
+else
+    echo -e '\tColor schemes found, ignoring.'
 fi
 echo
 
