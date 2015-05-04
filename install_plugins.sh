@@ -5,7 +5,7 @@
 #############
 
 dir=~/dotfiles
-files="bashrc vimrc tmux.conf"
+files="bashrc vimrc tmux.conf tmux-powerlinerc"
 
 ##########
 # Script #
@@ -146,15 +146,38 @@ else
 fi
 echo
 
-echo 'Checking for color schemes...'
+echo 'Copying color schemes...'
 if [ ! -d ~/.vim/colors ]; then
-    echo -e '\tColor schemes not found, copying...'
     mkdir ~/.vim/colors
-    cp ~/dotfiles/colors ~/.vim/colors
-    echo -e '\tColor schemes copied.'
-else
-    echo -e '\tColor schemes found, ignoring.'
 fi
+    cp -r ~/dotfiles/colors ~/.vim/
+    echo -e '\tColor schemes copied.'
 echo
+
+################
+# Tmux Plugins #
+################
+
+if [ ! -d ~/.tmux ]; then
+    mkdir ~/.tmux
+fi
+cd ~/.tmux
+
+echo 'Checking for Tmux Powerline...'
+if [ ! -d ~/.tmux/tmux-powerline ]; then
+    echo 'Tmux Powerline not found, installing...'
+    git clone https://github.com/erikw/tmux-powerline
+    fls="earthquake.sh hostname.sh lan_ip.sh wan_ip.sh"
+    dir2=~/.tmux/tmux-powerline/segments
+    for file in $fls; do
+        if [ -e $dir2/$file ]; then
+            echo 'Removing ' $file '...'
+            rm $dir2/$file
+        fi
+    done
+    echo 'Tmux Powerline installed.'
+else
+    echo 'Tmux Powerline found, ignoring.'
+fi
 
 echo 'Script complete.'
