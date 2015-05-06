@@ -467,6 +467,16 @@ alias tree='tree -L '                               # Trees <n> levels of cwd
 alias funnycommands='cat ~/Documents/funnycommands.txt'
 
 
+###################
+# SPOTIFY ALIASES #
+###################
+
+alias spotifynext='dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next'
+alias spotifyprev='dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Prev'
+alias spotifypause='dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause'
+alias spotifyplay='dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play'
+
+
 ################
 # WORK ALIASES #
 ################
