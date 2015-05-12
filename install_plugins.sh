@@ -180,4 +180,12 @@ else
     echo 'Tmux Powerline found, ignoring.'
 fi
 
+##################
+# Desktop Config #
+##################
+
+echo 'Copying DConf...'
+cp ~/dotfiles/user ~/.config/dconf/user
+echo 'DConf copied!'
+
 echo 'Script complete.'
