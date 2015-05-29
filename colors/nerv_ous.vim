@@ -77,7 +77,7 @@ hi Character guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NON
 hi Number guifg=#ff0000 guibg=NONE guisp=NONE gui=NONE ctermfg=196 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
 hi Operator guifg=#696969 guibg=NONE guisp=NONE gui=NONE ctermfg=242 ctermbg=NONE cterm=NONE
-hi CursorLine guifg=NONE guibg=#260a00 guisp=#260a00 gui=NONE ctermfg=NONE ctermbg=52 cterm=NONE
+hi CursorLine guifg=NONE guibg=#260a00 guisp=#260a00 gui=NONE ctermfg=NONE ctermbg=black cterm=NONE
 hi TabLineFill guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 hi Question guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
 hi WarningMsg guifg=#000000 guibg=#888888 guisp=#888888 gui=NONE ctermfg=NONE ctermbg=102 cterm=NONE
