@@ -147,9 +147,9 @@ fi
 echo
 
 echo 'Copying color schemes...'
-if [ ! -d ~/.vim/colors ]; then
-    mkdir ~/.vim/colors
-fi
+# if [ ! -d ~/.vim/colors ]; then
+#    mkdir ~/.vim/colors
+# fi
     cp -r ~/dotfiles/colors ~/.vim/
     echo -e '\tColor schemes copied.'
 echo
@@ -184,8 +184,8 @@ fi
 # Desktop Config #
 ##################
 
-echo 'Copying DConf...'
-cp ~/dotfiles/user ~/.config/dconf/user
-echo 'DConf copied!'
+# echo 'Copying DConf...'
+# cp ~/dotfiles/user ~/.config/dconf/user
+# echo 'DConf copied!'
 
 echo 'Script complete.'
