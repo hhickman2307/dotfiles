@@ -71,10 +71,11 @@ let g:airline_symbols.branch = ''
 "Ctrlp
 "Tagbar
 "Tabular
+"Easymotion
 
-" colorscheme twilight
+colorscheme twilight
 " colorscheme vividchalk
-colorscheme feral
+" colorscheme feral
 
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -91,3 +92,7 @@ set wildmode=list,list
 set completeopt=menu
 let g:jedi#popup_select_first = 0
 let g:ycm_min_num_identifier_candidate_chars = 3
+
+" Easymotion
+"map <Leader> <Plug>(easymotion-prefix) <Space>
+let mapleader = "\<Space>"

@@ -122,11 +122,21 @@ echo
 
 echo 'Checking for Tagbar...'
 if [ ! -d ~/.vim/bundle/tagbar ]; then
-    echo -e '\Tagbar not found, installing...'
+    echo -e '\tTagbar not found, installing...'
     git clone https://github.com/majutsushi/tagbar
     echo -e '\tTagbar installed successfully.'
 else
     echo -e '\tTagbar found, ignoring.'
+fi
+echo
+
+echo 'Checking for EasyMotion...'
+if [ ! -d ~/.vim/bundle/vim-easymotion ]; then
+    echo -e '\tEasyMotion not found, installing...'
+    git clone https://github.com/Lokaltog/vim-easymotion
+    echo -e '\tEasymotion installed successfully.'
+else
+    echo -e '\tEasymotion found, ignoring.'
 fi
 echo
 
