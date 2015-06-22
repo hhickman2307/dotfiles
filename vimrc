@@ -17,6 +17,9 @@ set backspace=2
 "Syntax Highlighting
 syntax on
 
+"Adding the 80 character column marker
+set colorcolumn=80
+
 "Auto read when file is changed externally
 set autoread
 
@@ -66,12 +69,16 @@ let g:airline_symbols.branch = ''
 "Pathogen as plugin manager
 "vim-airline
 "vim-fugitive
-"YouCompleteMe
+"YouCompleteMe - DISABLED
+"PythonMode - DISABLED
 "Scratch
 "Ctrlp
 "Tagbar
 "Tabular
 "Easymotion
+"Nerdtree
+"Jedi
+"Pyflakes
 
 colorscheme twilight
 " colorscheme vividchalk
@@ -96,3 +103,13 @@ let g:ycm_min_num_identifier_candidate_chars = 3
 " Easymotion
 "map <Leader> <Plug>(easymotion-prefix) <Space>
 let mapleader = "\<Space>"
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+" Jedi
+" let g:jedi#completions_command = "<Tab>"
+
+" Pyflakes
+autocmd BufWritePost *.py call Flake8() " Automatically run on write
+let g:flake8_show_in_gutter = 1 " Display marks in left column
