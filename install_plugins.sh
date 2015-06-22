@@ -85,28 +85,51 @@ else
 fi
 echo
 
-echo 'Checking for Python-Mode...'
-if [ ! -d ~/.vim/bundle/python-mode ]; then
-    echo -e '\tPython-mode not found, installing...'
-    git clone https://github.com/klen/python-mode
-    echo -e '\tPython-mode installed successfully.'
+#echo 'Checking for Python-Mode...'
+#if [ ! -d ~/.vim/bundle/python-mode ]; then
+#    echo -e '\tPython-mode not found, installing...'
+#    git clone https://github.com/klen/python-mode
+#    echo -e '\tPython-mode installed successfully.'
+#else
+#    echo -e '\tPython-mode found, ignoring.'
+#fi
+#echo
+
+#echo 'Checking for YouCompleteMe...'
+#if [ ! -d ~/.vim/bundle/YouCompleteMe ]; then
+#    echo -e '\tYouCompleteMe not found, installing...'
+#    git clone https://github.com/Valloric/YouCompleteMe
+#    sudo apt-get install build-essential cmake
+#    sudo apt-get install python-dev
+#    cd ~/.vim/bundle/YouCompleteMe
+#    git submodule update --init --recursive
+#    ./install.sh --clang-completer
+#    echo -e '\tYouCompleteMe installed successfully.'
+#else
+#    echo -e '\tYouCompleteMe found, igorning.'
+#fi
+#echo
+
+echo 'Checking for NerdTree...'
+if [ ! -d ~/.vim/bundle/nerdtree ]; then
+    echo -e '\tNerdTree not found, installing...'
+    git clone https://github.com/scrooloose/nerdtree
+    echo -e '\tNerdTree installed successfully.'
 else
-    echo -e '\tPython-mode found, ignoring.'
+    echo -e '\tNerdTree found, ignoring.'
 fi
 echo
 
-echo 'Checking for YouCompleteMe...'
-if [ ! -d ~/.vim/bundle/YouCompleteMe ]; then
-    echo -e '\tYouCompleteMe not found, installing...'
-    git clone https://github.com/Valloric/YouCompleteMe
-    sudo apt-get install build-essential cmake
-    sudo apt-get install python-dev
-    cd ~/.vim/bundle/YouCompleteMe
-    git submodule update --init --recursive
-    ./install.sh --clang-completer
-    echo -e '\tYouCompleteMe installed successfully.'
+echo 'Checking for Jedi...'
+if [ ! -d ~/.vim/bundle/jedi-vim ]; then
+    echo -e '\tJedi not found, installing...'
+    git clone --recursive https://github.com/davidhalter/jedi-vim
+    cd ~/.vim/bundle/jedi-vim
+    git submodule update --init
+    cd ~/.vim/bundle
+    echo -e '\tJedi installed successfully.'
 else
-    echo -e '\tYouCompleteMe found, igorning.'
+    echo -e '\tJedi found, ignoring.'
 fi
 echo
 
@@ -137,6 +160,17 @@ if [ ! -d ~/.vim/bundle/vim-easymotion ]; then
     echo -e '\tEasymotion installed successfully.'
 else
     echo -e '\tEasymotion found, ignoring.'
+fi
+echo
+
+echo 'Checking for Pyflakes...'
+if [ ! -d ~/.vim/bundle/vim-flake8 ]; then
+    echo -e '\tPyflakes not found, installing...'
+    sudo pip install flake8
+    git clone https://github.com/nvie/vim-flake8
+    echo -e '\tPyflakes installed successfully.'
+else
+    echo -e '\tPyflakes found, ignoring.'
 fi
 echo
 
