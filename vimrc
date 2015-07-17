@@ -6,10 +6,15 @@ set noswapfile
 set t_Co=256
 
 " Keybindings
-" nnoremap j h
-" nnoremap i k
-" nnoremap k j
-" nnoremap o i
+nnoremap a h
+nnoremap s j
+nnoremap w k
+nnoremap d l
+nnoremap h a
+nnoremap l s
+nnoremap j w
+nnoremap k d
+nnoremap kk dd
 
 " make backspace work like most other apps
 set backspace=2
