@@ -118,3 +118,5 @@ map <C-n> :NERDTreeToggle<CR>
 " Pyflakes
 autocmd BufWritePost *.py call Flake8() " Automatically run on write
 let g:flake8_show_in_gutter = 1 " Display marks in left column
+
+" VIMIUM EXTENSION FOR CHROME
