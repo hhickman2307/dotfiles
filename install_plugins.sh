@@ -4,8 +4,8 @@
 # Variables #
 #############
 
-dir=~/dotfiles
-files="bashrc vimrc tmux.conf tmux-powerlinerc"
+dir=~/Documents/Personal/dotfiles
+files="bashrc vimrc tmux.conf tmux-powerlinerc bash_aliases"
 
 ##########
 # Script #

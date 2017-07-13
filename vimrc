@@ -23,7 +23,7 @@ set backspace=2
 syntax on
 
 "Adding the 80 character column marker
-set colorcolumn=80
+"set colorcolumn=80
 
 "Auto read when file is changed externally
 set autoread
@@ -44,7 +44,7 @@ set laststatus=2
 set number
 
 "Underline
-set cursorline
+"set cursorline
 
 "Persistent undo
 set undodir=$HOME/.vim/undo
@@ -60,7 +60,7 @@ set expandtab
 "Plugins
 execute pathogen#infect()
 "let g:airline_theme='raven'
-let g:airline_theme='laederon'
+"let g:airline_theme='laederon'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -97,7 +97,7 @@ nmap <F8> :TagbarToggle<CR>
 nmap <F9> :TagbarOpen fc<CR>
 
 " Automatic unfolding
-set foldlevel=99
+" set foldlevel=99
 
 " YouCompleteMe
 set wildmode=list,list
@@ -116,7 +116,7 @@ map <C-n> :NERDTreeToggle<CR>
 " let g:jedi#completions_command = "<Tab>"
 
 " Pyflakes
-autocmd BufWritePost *.py call Flake8() " Automatically run on write
-let g:flake8_show_in_gutter = 1 " Display marks in left column
+" autocmd BufWritePost *.py call Flake8() " Automatically run on write
+" let g:flake8_show_in_gutter = 1 " Display marks in left column
 
 " VIMIUM EXTENSION FOR CHROME
